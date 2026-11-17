@@ -2460,7 +2460,7 @@ public enum Effect {
                }
                if (odds >= Math.random()) {
                   List<Integer> toUnfreeze = new ArrayList<Integer>();
-                  for (Integer i : matches) {
+                  for (int i = 0; i < matches.size() / 2; i++) {
                      int row = matches.get(i * 2);
                      int col = matches.get(i * 2 + 1);
                      toUnfreeze.addAll(Arrays.asList(row, col));
